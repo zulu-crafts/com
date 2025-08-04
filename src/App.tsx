@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from '../src/pages/about';
 import Header from '../src/components/header';
 import '../src/index.css';
@@ -7,7 +7,7 @@ import Home from '../src/pages/home';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/com">
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow px-4 py-8">
@@ -18,7 +18,7 @@ function App() {
           <Footer/>
         </main>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
