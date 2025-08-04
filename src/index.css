@@ -251,23 +251,3 @@ button:focus-visible {
   padding: 2em;
   background-color:#d1d5db;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-  font-size: 32px;
-  color: #007BFF; /* Blue icon */
-}
-
-.icon-circle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
