@@ -1,6 +1,23 @@
+import HomeImage1 from '../assets/lesedi-ict-klerksdorp.jpg';
+
+
+
 const About = () => {
   return (
+    
     <div className="max-w-5xl mx-auto px-4 py-10 text-gray-800 about-container">
+      <div className="home-image-container">
+        <img
+          src={HomeImage1}
+          alt="Zulu Crafts Banner"
+          className="home-image fade-in"
+          
+        />
+        <div className="home-image-overlay"></div>
+        <div className="home-image-text">
+          <h1>Our Story ..</h1>
+        </div>
+      </div>
 
       <section className="mb-10 space-y-4">
          <h1 className="text-4xl font-bold text-blue-600 mb-2">About Us</h1>

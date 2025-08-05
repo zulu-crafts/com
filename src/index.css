@@ -2,11 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,11 +11,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #293C4B;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #293C4B;
 }
 
 body {
@@ -35,7 +31,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -45,9 +41,9 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
+} */
 button:hover {
-  border-color: #646cff;
+  border-color: #293C4B;
 }
 button:focus,
 button:focus-visible {
@@ -74,9 +70,32 @@ button:focus-visible {
 }
 
 /* Header.css */
+.header-top {
+  background-color: #ECE8DF;
+}
+
+.header-bottom {
+  background-color: #ECE8DF;
+  
+}
+
+.contact-info a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 640px) {
+  .contact-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 
 .header {
-  background-color: white;
+  background-color: 	#FFFFFF	rgb(255, 255, 255);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -91,14 +110,28 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #2563eb; /* Tailwind's blue-600 */
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+.logo img {
+  height: 10rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24,
+}
 .nav {
   display: flex;
   gap: 1.5rem;
@@ -107,13 +140,13 @@ button:focus-visible {
 .nav-link {
   position: relative;
   font-weight: 500;
-  color: #4b5563; /* Tailwind's gray-700 */
+  color: #293C4B;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #2563eb;
+  color: 	#293C4B	rgb(13, 44, 84)
 }
 
 .nav-link::after {
@@ -123,7 +156,7 @@ button:focus-visible {
   bottom: -4px;
   height: 2px;
   width: 0%;
-  background-color: #2563eb;
+  background-color: #293C4B;
   transition: width 0.3s ease;
 }
 
@@ -133,14 +166,12 @@ button:focus-visible {
 }
 
 .nav-link.active {
-  color: #2563eb;
+  color: #012C43
 }
 
 .footer {
-  background-color: #1f2937;
-  color: #d1d5db;
+  background-color: #293C4B;
   padding: 2rem 1.5rem;
-  margin-top: 3rem;
 }
 
 .footer-container {
@@ -248,6 +279,27 @@ button:focus-visible {
   font-weight: 300;
 }
 .main{
-  padding: 2em;
-  background-color:#d1d5db;
+  padding: 1em;
+  background-color:#ECE8DF;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 9999px; /* pill shape */
+  text-decoration: none;
+  color: #173660;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #f0f0f0;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
 }
