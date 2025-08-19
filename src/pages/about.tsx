@@ -1,13 +1,38 @@
+import HomeImage1 from '../assets/istockphoto-1438634414-612x612.jpg';
+import HomeImage2 from '../assets/istockphoto-1434742171-612x612.jpg';
+import { useEffect, useState } from 'react';
 const About = () => {
+  const images = [HomeImage1, HomeImage2];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 text-gray-800 about-container">
 
-      <section className="mb-10 space-y-4">
-         <h1 className="text-4xl font-bold text-blue-600 mb-2">About Us</h1>
+      <section className="bg-white text-gray-800" >
+        <div className="home-image-container">
+          <img
+            src={images[currentIndex]}
+            alt="Zulu Crafts Banner"
+            className="home-image fade-in"
+            key={currentIndex} // triggers animation
+          />
+          <div className="home-image-overlay"></div>
+          <div className="home-image-text">
+            <h1>Get to Know Us..</h1>
+          </div>
+        </div>
+        <h1 className="text-4xl font-bold text-blue-600 mb-2">About Us</h1>
         <p className="text-xl italic text-gray-600">
           Crafting Code into Art. Shaping Solutions into Experiences.
         </p>
-        <p> 
+        <p>
           At <span className="font-semibold">Zulu-Crafts</span>, we don’t just write code — we sculpt it.
           Every project is a canvas, every challenge a spark of inspiration. As a forward-thinking IT company,
           we pride ourselves on transforming complex problems into beautifully engineered solutions that
